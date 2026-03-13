@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Калькулятор металла и краски — УралМетСтрой
 
-## Getting Started
+Онлайн-калькулятор веса металлопроката и расхода краски. Мигрирован с React+Vite на **Next.js 14** (App Router).
 
-First, run the development server:
+**Продакшен:** [calc.uralmetstroy.ru](https://calc.uralmetstroy.ru)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Стек
+
+- **Next.js 14** (App Router, SSR/Static)
+- **TypeScript**
+- **styled-components** — стилизация компонентов
+- **Zustand** — глобальное состояние (тема, история расчётов)
+- **react-hook-form** — формы
+- **react-slider** — ползунки
+- **Sass** — глобальные стили
+- **nanoid** — генерация ID результатов
+
+---
+
+## Страницы
+
+| Маршрут | Описание |
+|---------|----------|
+| `/` | Калькулятор веса металлопроката |
+| `/paint` | Калькулятор расхода краски |
+| `/info` | Справка и инструкция |
+
+---
+
+## Возможности
+
+**Калькулятор металла:**
+- 10 форм профилей: труба профильная, лист, труба круглая, круг, уголок, квадрат, швеллер, полоса, балка, шестигранник
+- 200+ марок металлов: сталь, чугун, алюминий, бронза, латунь, медь, магний, никель, олово, свинец, титан, цинк
+- Единицы длины: мм / см / м; единицы веса: кг / тн
+- История расчётов (localStorage)
+
+**Калькулятор краски:**
+- Расчёт расхода по площади металлоизделия
+- Учёт удельного веса, толщины покрытия, эффективности нанесения
+- Поддержка валют: руб / USD / EUR
+- Двусторонняя покраска для листов и полос
+
+**UI:**
+- Тёмная и светлая тема (сохраняется в localStorage)
+- Адаптивная вёрстка (desktop / tablet / mobile)
+
+---
+
+## Структура проекта
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout, metadata, styled-components registry
+│   ├── page.tsx            # Калькулятор металла + JSON-LD WebApplication
+│   ├── paint/page.tsx      # Калькулятор краски + JSON-LD WebApplication
+│   ├── info/page.tsx       # Справка + JSON-LD FAQPage
+│   └── globals.scss        # Глобальные стили, CSS-переменные, темы
+├── components/
+│   ├── pages/              # Клиентские компоненты страниц
+│   ├── results/            # Таблицы результатов
+│   ├── sidebar/            # Боковое меню
+│   └── ui/                 # Кнопки, поля, select, range, spoiler
+├── lib/
+│   └── registry.tsx        # styled-components SSR registry
+├── store/
+│   ├── appStore.ts         # Тема, состояние сайдбара
+│   ├── resultStore.ts      # История расчётов металла
+│   └── resultPaintStore.ts # История расчётов краски
+├── helpers.ts              # Формулы расчёта, списки форм и размеров
+├── selects.ts              # Данные по металлам и маркам (200+ записей)
+└── types.ts                # TypeScript типы
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Запуск локально
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+# http://localhost:3000
+```
 
-## Learn More
+## Сборка и деплой
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+pm2 reload calc.uralmetstroy.ru
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Сервер:** `138.249.141.64`, порт `3002` (PM2 fork), Nginx reverse proxy, SSL Let's Encrypt
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Уникальные `title`, `description`, `canonical` для каждой страницы
+- OpenGraph теги
+- JSON-LD Schema.org: `WebApplication` (главная, краска), `FAQPage` (справка)
