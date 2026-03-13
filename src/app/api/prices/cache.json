@@ -1,0 +1,142 @@
+{
+  "updatedAt": "2026-03-13T21:03:51Z",
+  "source": "mc.ru",
+  "region": "Екатеринбург",
+  "items": [
+    {
+      "slug": "armatura_riflenaya_a3",
+      "name": "Арматура рифленая А500С (А3)",
+      "group": "Сортовой",
+      "minPrice": 43990,
+      "maxPrice": 49990,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/armatura_riflenaya_a3"
+    },
+    {
+      "slug": "armatura_gladkaya_a1",
+      "name": "Арматура гладкая А240 (А1)",
+      "group": "Сортовой",
+      "minPrice": 43990,
+      "maxPrice": 46990,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/armatura_gladkaya_a1"
+    },
+    {
+      "slug": "ugolok_ravnopolochnyj",
+      "name": "Уголок равнополочный",
+      "group": "Сортовой",
+      "minPrice": 47490,
+      "maxPrice": 120990,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/ugolok_ravnopolochnyj"
+    },
+    {
+      "slug": "shveller",
+      "name": "Швеллер",
+      "group": "Сортовой",
+      "minPrice": 50990,
+      "maxPrice": 116990,
+      "unit": "руб./м",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/shveller"
+    },
+    {
+      "slug": "balki_dvutavrovye",
+      "name": "Балка двутавровая",
+      "group": "Сортовой",
+      "minPrice": 65000,
+      "maxPrice": 134990,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/balki_dvutavrovye"
+    },
+    {
+      "slug": "krug_g_k",
+      "name": "Круг горячекатаный",
+      "group": "Сортовой",
+      "minPrice": 48790,
+      "maxPrice": 310000,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/krug_g_k"
+    },
+    {
+      "slug": "kvadrat_goryachekatanyj",
+      "name": "Квадрат горячекатаный",
+      "group": "Сортовой",
+      "minPrice": 53890,
+      "maxPrice": 97890,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/kvadrat_goryachekatanyj"
+    },
+    {
+      "slug": "polosa_g_k",
+      "name": "Полоса горячекатаная",
+      "group": "Сортовой",
+      "minPrice": 53890,
+      "maxPrice": 110890,
+      "unit": "руб./м",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/polosa_g_k"
+    },
+    {
+      "slug": "shestigrannik_goryachekatanyj_konstrukcionnyj",
+      "name": "Шестигранник г/к",
+      "group": "Сортовой",
+      "minPrice": 76790,
+      "maxPrice": 89290,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/shestigrannik_goryachekatanyj_konstrukcionnyj"
+    },
+    {
+      "slug": "stal_listovaya_g_k",
+      "name": "Лист горячекатаный",
+      "group": "Листовой",
+      "minPrice": 55990,
+      "maxPrice": 609100,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/stal_listovaya_g_k"
+    },
+    {
+      "slug": "stal_listovaya_h_k",
+      "name": "Лист холоднокатаный",
+      "group": "Листовой",
+      "minPrice": 74490,
+      "maxPrice": 624850,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/stal_listovaya_h_k"
+    },
+    {
+      "slug": "stal_listovaya_ocinkovannaya",
+      "name": "Лист оцинкованный",
+      "group": "Листовой",
+      "minPrice": 72390,
+      "maxPrice": 92090,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/stal_listovaya_ocinkovannaya"
+    },
+    {
+      "slug": "truby_ehlektrosvarnye_kruglye",
+      "name": "Труба ЭС круглая",
+      "group": "Трубы",
+      "minPrice": 55090,
+      "maxPrice": 80090,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/truby_ehlektrosvarnye_kruglye"
+    },
+    {
+      "slug": "truby_ehlektrosvarnye_kvadratnye",
+      "name": "Труба профильная квадратная",
+      "group": "Трубы",
+      "error": true
+    },
+    {
+      "slug": "truby_ehlektrosvarnye_pryamougolnye",
+      "name": "Труба профильная прямоугольная",
+      "group": "Трубы",
+      "error": true
+    },
+    {
+      "slug": "truby_vgp",
+      "name": "Труба ВГП (водогазопроводная)",
+      "group": "Трубы",
+      "error": true
+    }
+  ]
+}
