@@ -31,7 +31,7 @@ const MetalCalc: React.FC = () => {
 
   return (
     <AppWrapper>
-      <Header title="Калькулятор веса металла" />
+      <Header title="Калькулятор веса металла онлайн" />
       <div className="app-calc app-metal">
         <Materials setMaterials={setMaterials} />
         <form onSubmit={handleSubmit(calcHandler)} noValidate className="grid grid-2 grid-tb-1">
