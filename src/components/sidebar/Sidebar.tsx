@@ -4,6 +4,7 @@ import { useAppStore } from "@/store/appStore"
 import SideLogo from "./SideLogo"
 import Link from "next/link"
 import BtnIcon from "../ui/BtnIcon"
+import { usePwaInstall } from "@/lib/usePwaInstall"
 
 const asideWidth = 300
 
@@ -33,6 +34,7 @@ const Nav = styled.ul`
 
 const Sidebar: React.FC = () => {
   const { aside, setAside, theme, toggleTheme } = useAppStore()
+  const { isInstallable, install } = usePwaInstall()
   return (
     <>
       <Aside $opened={aside}>
@@ -51,6 +53,16 @@ const Sidebar: React.FC = () => {
             </a>
           </li>
         </Nav>
+        {isInstallable && (
+          <Nav>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); install(); setAside() }}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.801 550.801"><g><path d="M488.427,197.019h-13.226v-63.822c0-0.401-0.063-0.799-0.116-1.205c-0.021-2.531-0.828-5.023-2.563-6.993L366.325,3.694c-0.031-0.034-0.063-0.045-0.084-0.076c-0.633-0.709-1.371-1.298-2.151-1.804c-0.232-0.158-0.465-0.287-0.707-0.422c-0.675-0.366-1.393-0.675-2.131-0.896c-0.2-0.053-0.379-0.135-0.58-0.19C359.871,0.119,359.037,0,358.193,0H97.201c-11.918,0-21.6,9.693-21.6,21.601v175.413H62.378c-17.049,0-30.874,13.818-30.874,30.87v160.542c0,17.044,13.824,30.876,30.874,30.876h13.223V529.2c0,11.907,9.682,21.601,21.6,21.601h356.4c11.907,0,21.601-9.693,21.601-21.601V419.302h13.226c17.044,0,30.87-13.827,30.87-30.87V227.89C519.297,210.832,505.471,197.019,488.427,197.019z M97.201,21.601h250.193v110.51c0,5.967,4.841,10.8,10.8,10.8h95.407v54.108h-356.4V21.601z M453.601,523.347h-356.4V419.302h356.4V523.347z"/></g></svg>
+                Скачать на телефон
+              </a>
+            </li>
+          </Nav>
+        )}
         <AsideItem>
           <BtnIcon areaLabel="Смена цвета темы" classname={`switchIcon ${theme ? 'active' : ''}`} handler={() => toggleTheme()} />
         </AsideItem>
