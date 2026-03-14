@@ -9,9 +9,11 @@ const Header: React.FC<IHeader> = ({ title }) => {
   return (
     <div className="app-header">
       <h1>{title}</h1>
-      <BtnIcon areaLabel="Калькулятор металла" classname="calcMetalIcon" to="/" type="navlink" />
-      <BtnIcon areaLabel="Калькулятор краски" classname="calcSprayIcon" to="/paint" type="navlink" />
-      <BtnIcon areaLabel="Меню" classname={`menuIcon ${theme ? 'active' : ''}`} handler={() => setAside()} />
+      <div className="app-header__btns">
+        <BtnIcon areaLabel="Калькулятор металла" classname="calcMetalIcon" to="/" type="navlink" />
+        <BtnIcon areaLabel="Калькулятор краски" classname="calcSprayIcon" to="/paint" type="navlink" />
+        <BtnIcon areaLabel="Меню" classname={`menuIcon ${theme ? 'active' : ''}`} handler={() => setAside()} />
+      </div>
     </div>
   )
 }
