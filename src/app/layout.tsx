@@ -34,6 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Калькулятор металла" />
         <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png" />
+        {/* Синхронный скрипт: устанавливает тему ДО рендера, устраняет FOUC */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var s=localStorage.getItem('app'),t='dark';if(s){var p=JSON.parse(s);t=p.state&&p.state.theme===true?'light':'dark';}else{if(!window.matchMedia('(prefers-color-scheme: dark)').matches)t='light';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='dark'?'#151515':'#1B53BC');}catch(e){}})();` }} />
       </head>
       <body>
         <StyledComponentsRegistry>

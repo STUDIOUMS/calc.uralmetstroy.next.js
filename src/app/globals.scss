@@ -16,6 +16,7 @@
 }
 
 
+html[data-theme="light"],
 body[data-theme="light"] {
   --color-background: #fff;
   --color-bg: #FAFAFA;
@@ -27,6 +28,7 @@ body[data-theme="light"] {
   --color-btnTextWhite: #fff;
   --color-btnTextDark: #000;
 }
+html[data-theme="dark"],
 body[data-theme="dark"] {
   --color-background: #151515;
   --color-bg: #232323;
@@ -37,6 +39,11 @@ body[data-theme="dark"] {
   --color-btn: #FF800B;
   --color-btnTextWhite: #fff;
   --color-btnTextDark: #fff;
+}
+
+.theme-transitions-enabled,
+.theme-transitions-enabled * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 
