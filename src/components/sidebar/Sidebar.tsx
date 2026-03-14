@@ -20,11 +20,11 @@ const Overlay = styled.div<{ $opened: boolean }>`
   display: ${props => props.$opened ? 'block' : 'none'};
 `
 const Nav = styled.ul`
-  color: var(--color-text); display: block; margin: 0; padding: 0;
+  color: var(--color-black); display: block; margin: 0; padding: 0;
   li {
     border-bottom: 1px solid var(--color-line); font-size: 14px; list-style: none;
     a {
-      align-items: center; color: var(--color-text); display: flex;
+      align-items: center; color: var(--color-black); display: flex;
       padding: 14px 20px; text-decoration: none; transition: all 200ms ease-in-out;
       &:hover { background: var(--color-line); }
       svg { fill: var(--color-svg); width: 20px; margin: 0 14px 0 0; }

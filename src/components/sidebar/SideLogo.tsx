@@ -6,7 +6,7 @@ interface ISideLogo { title: string }
 
 const LogoBody = styled.div`border-bottom: 1px solid var(--color-line); padding: 20px;`
 const Logo = styled.div`margin: 0 0 10px; img { display: block; }`
-const LogoText = styled.div`color: var(--color-text);`
+const LogoText = styled.div`color: var(--color-black);`
 
 const SideLogo: React.FC<ISideLogo> = ({ title }) => {
   const { theme } = useAppStore()

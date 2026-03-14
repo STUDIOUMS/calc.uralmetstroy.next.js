@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-13T21:03:51Z",
+  "updatedAt": "2026-03-14T02:00:37Z",
   "source": "mc.ru",
   "region": "Екатеринбург",
   "items": [
@@ -124,19 +124,28 @@
       "slug": "truby_ehlektrosvarnye_kvadratnye",
       "name": "Труба профильная квадратная",
       "group": "Трубы",
-      "error": true
+      "minPrice": 55090,
+      "maxPrice": 90090,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/truby_ehlektrosvarnye_kvadratnye"
     },
     {
       "slug": "truby_ehlektrosvarnye_pryamougolnye",
       "name": "Труба профильная прямоугольная",
       "group": "Трубы",
-      "error": true
+      "minPrice": 57090,
+      "maxPrice": 80090,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/truby_ehlektrosvarnye_pryamougolnye"
     },
     {
       "slug": "truby_vgp",
       "name": "Труба ВГП (водогазопроводная)",
       "group": "Трубы",
-      "error": true
+      "minPrice": 57090,
+      "maxPrice": 60090,
+      "unit": "руб./т",
+      "url": "https://mc.ru/region/ekaterinburg/metalloprokat/truby_vgp"
     }
   ]
 }

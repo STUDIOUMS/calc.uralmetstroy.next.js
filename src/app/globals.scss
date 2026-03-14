@@ -199,6 +199,7 @@ p, ol, ul {
 input[type="checkbox"] { background-image: url(/assets/check.svg); }
 
 /* dark theme */
+html[data-theme="dark"],
 body[data-theme="dark"] {
   .infoIcon { background-image: url('/assets/info-white.svg'); }
   .deleteIcon { background-image: url('/assets/trash-white.svg'); background-color: var(--color-bg); }
@@ -253,16 +254,29 @@ body[data-theme="dark"] {
   .mb-visible { display: block; }
   .app {
     max-width: none;
-    margin: 0 15px;
-    h1 { font-size: 18px; line-height: 20px; }
-    h2 { font-size: 18px; line-height: 22px; margin: 0 0 20px; }
+    margin: 0 12px;
+    h1 { font-size: 18px; line-height: 22px; }
+    h2 { font-size: 16px; line-height: 20px; margin: 0 0 16px; }
     &-header {
-      margin: 0 0 20px;
-      h1 { margin: 0 auto 0 0; }
+      margin: 0 0 16px;
+      flex-wrap: wrap;
+      h1 { margin: 0 auto 0 0; font-size: 16px; line-height: 20px; }
+      button, a { min-width: 44px; min-height: 44px; }
+    }
+    &-calc {
+      padding: 8px;
+      margin: 0 0 24px;
+      border-radius: 8px;
     }
     &box {
-      padding: 15px;
-      &-total { font-size: 16px; }
+      padding: 12px;
+      border-radius: 8px;
+      &-total { font-size: 15px; }
+      &-fields { padding: 12px; }
     }
   }
+  /* предотвращаем горизонтальный скролл */
+  body { overflow-x: hidden; }
+  * { max-width: 100%; }
+  select, input { font-size: 16px !important; } /* предотвращаем zoom при фокусе на iOS */
 }

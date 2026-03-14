@@ -11,7 +11,7 @@ const StyledTrack = styled.div<{ $index: number }>`
 `
 const StyledThumb = styled.div`
   align-items: center; background: var(--color-bg); border: 2px solid var(--color-line); border-radius: 6px;
-  color: var(--color-text); cursor: grab; display: flex; font-size: 12px; height: 30px;
+  color: var(--color-black); cursor: grab; display: flex; font-size: 12px; height: 30px;
   justify-content: center; line-height: 12px; outline: none; top: -11px; width: 30px;
 `
 

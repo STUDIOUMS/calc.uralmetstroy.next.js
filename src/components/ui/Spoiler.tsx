@@ -19,7 +19,7 @@ const Head = styled.button`
   background: var(--color-bg);
   border: 0;
   border-radius: 10px;
-  color: var(--color-text);
+  color: var(--color-black);
   cursor: pointer;
   display: block;
   font-family: var(--ff);
