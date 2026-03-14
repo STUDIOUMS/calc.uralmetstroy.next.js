@@ -1,21 +1,14 @@
 #!/bin/bash
-# Updates metal price cache by running scraper on Russian proxy server.
-# Cron: 0 8 * * * /var/www/calc.uralmetstroy.ru/scripts/update-prices.sh >> /var/log/prices-update.log 2>&1
+# Updates metal price cache by running scraper locally.
+# Cron: 0 5 * * * /var/www/nextjs/calc.uralmetstroy.ru/scripts/update-prices.sh >> /var/log/prices-update.log 2>&1
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CACHE_FILE="$SCRIPT_DIR/../src/app/api/prices/cache.json"
 SCRAPER="$SCRIPT_DIR/scrape-prices.py"
-OLD_SERVER="root@77.222.37.168"
-OLD_PASS="Q8WNK1JGLL^V5a6F"
 
 echo "[$(date)] Starting price update..."
 
-# Upload scraper and run it on the Russian server
-sshpass -p "$OLD_PASS" scp -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$SCRAPER" "$OLD_SERVER:/tmp/scrape-prices.py" || {
-  echo "[$(date)] ERROR: could not upload scraper" >&2; exit 1
-}
-
-RESULT=$(sshpass -p "$OLD_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$OLD_SERVER" "python3 /tmp/scrape-prices.py 2>/dev/null")
+RESULT=$(python3 "$SCRAPER" 2>/dev/null)
 
 if [ -z "$RESULT" ]; then
   echo "[$(date)] ERROR: scraper returned empty result" >&2; exit 1
